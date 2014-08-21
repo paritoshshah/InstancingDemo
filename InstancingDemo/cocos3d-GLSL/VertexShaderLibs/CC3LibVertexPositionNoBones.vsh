@@ -48,6 +48,7 @@
 
 #import "CC3LibModelMatrices.vsh"
 
+#extension GL_EXT_draw_instanced: enable
 
 attribute highp vec4	a_cc3Position;			/**< Vertex position. */
 attribute vec3			a_cc3Normal;			/**< Vertex normal. */
@@ -66,6 +67,10 @@ void positionVertex() {
 	vtxNormal = a_cc3Normal;
 	vtxTangent = a_cc3Tangent;
 
-	gl_Position = u_cc3MatrixModelViewProj * vtxPosition;
+    float xOffset = float(gl_InstanceIDEXT) * 3.0;
+    //float yOffset = float(gl_InstanceIDEXT) * 3.0;
+    vec4 offset = vec4(xOffset, 0, 0, 0);
+    
+	gl_Position = u_cc3MatrixModelViewProj * (vtxPosition + offset);
 }
 

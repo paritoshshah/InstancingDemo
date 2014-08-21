@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE2028B919A672DE00A92DE6 /* cube.pod in Resources */ = {isa = PBXBuildFile; fileRef = DE2028B819A672DE00A92DE6 /* cube.pod */; };
 		DEC3466F19A6695800BB0C95 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC3466E19A6695800BB0C95 /* AudioToolbox.framework */; };
 		DEC3467119A6695800BB0C95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC3467019A6695800BB0C95 /* AVFoundation.framework */; };
 		DEC3467319A6695800BB0C95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC3467219A6695800BB0C95 /* CoreGraphics.framework */; };
@@ -324,7 +325,25 @@
 		DEC34A4519A6695D00BB0C95 /* LICENSE_cocos3d.txt in Resources */ = {isa = PBXBuildFile; fileRef = DEC34A4419A6695D00BB0C95 /* LICENSE_cocos3d.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DEC34A5119A6696600BB0C95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEC3466319A6695800BB0C95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEC3472919A6695900BB0C95;
+			remoteInfo = cocos2d;
+		};
+		DEC34A5319A6696A00BB0C95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEC3466319A6695800BB0C95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEC348A419A6695A00BB0C95;
+			remoteInfo = cocos3d;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		DE2028B819A672DE00A92DE6 /* cube.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = cube.pod; path = Resources/cube.pod; sourceTree = "<group>"; };
 		DEC3466B19A6695800BB0C95 /* InstancingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstancingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC3466E19A6695800BB0C95 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DEC3467019A6695800BB0C95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1030,6 +1049,7 @@
 		DEC3468A19A6695800BB0C95 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE2028B819A672DE00A92DE6 /* cube.pod */,
 				DEC3468B19A6695800BB0C95 /* hello-world.pod */,
 				DEC3469419A6695800BB0C95 /* Info.plist */,
 				DEC346BB19A6695800BB0C95 /* fps_images.png */,
@@ -2041,6 +2061,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				DEC34A5419A6696A00BB0C95 /* PBXTargetDependency */,
+				DEC34A5219A6696600BB0C95 /* PBXTargetDependency */,
 			);
 			name = InstancingDemo;
 			productName = InstancingDemo;
@@ -2128,6 +2150,7 @@
 				DEC3471F19A6695900BB0C95 /* CC3PointSprites.vsh in Resources */,
 				DEC346EF19A6695900BB0C95 /* CC3NoTextureReflect.fsh in Resources */,
 				DEC346A519A6695800BB0C95 /* Icon-57@2x.png in Resources */,
+				DE2028B919A672DE00A92DE6 /* cube.pod in Resources */,
 				DEC346CA19A6695800BB0C95 /* CC3LibEnvironmentReflection.fsh in Resources */,
 				DEC346B419A6695800BB0C95 /* Default.png in Resources */,
 				DEC346C219A6695800BB0C95 /* fps_images_1.png in Resources */,
@@ -2461,6 +2484,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DEC34A5219A6696600BB0C95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEC3472919A6695900BB0C95 /* cocos2d */;
+			targetProxy = DEC34A5119A6696600BB0C95 /* PBXContainerItemProxy */;
+		};
+		DEC34A5419A6696A00BB0C95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEC348A419A6695A00BB0C95 /* cocos3d */;
+			targetProxy = DEC34A5319A6696A00BB0C95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		DEC34A4619A6695D00BB0C95 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2712,6 +2748,7 @@
 				DEC34A4A19A6695D00BB0C95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEC34A4B19A6695D00BB0C95 /* Build configuration list for PBXNativeTarget "cocos2d" */ = {
 			isa = XCConfigurationList;
@@ -2720,6 +2757,7 @@
 				DEC34A4D19A6695D00BB0C95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DEC34A4E19A6695D00BB0C95 /* Build configuration list for PBXNativeTarget "cocos3d" */ = {
 			isa = XCConfigurationList;
@@ -2728,6 +2766,7 @@
 				DEC34A5019A6695D00BB0C95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
