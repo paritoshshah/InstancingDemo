@@ -67,9 +67,9 @@ void positionVertex() {
 	vtxNormal = a_cc3Normal;
 	vtxTangent = a_cc3Tangent;
 
-    float xOffset = float(gl_InstanceIDEXT) * 3.0;
-    //float yOffset = float(gl_InstanceIDEXT) * 3.0;
-    vec4 offset = vec4(xOffset, 0, 0, 0);
+    float xOffset = float(gl_InstanceIDEXT / 25) * 3.0;
+    float zOffset = float(gl_InstanceIDEXT - (gl_InstanceIDEXT / 25) * 25) * 3.0;
+    vec4 offset = vec4(xOffset, 0, zOffset, 0);
     
 	gl_Position = u_cc3MatrixModelViewProj * (vtxPosition + offset);
 }

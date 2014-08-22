@@ -64,14 +64,14 @@
 	// instead of adding the entire contents.
 	;
     
-    for (int i=0; i<1; i++) {
-        //NSString *name = [NSString stringWithFormat:@"cube%d", i];
-        CC3ResourceNode* j = [[CC3PODResourceNode nodeFromFile: @"cube.pod"] copy];
-        j.scale = cc3v(0.3, 0.3, 0.3);
-        j.location = cc3v(i, 0.0, 0.0);
-        [self addChild: j];
-    }
+
     
+    CC3ResourceNode* j = [[CC3PODResourceNode nodeFromFile: @"cube.pod"] copy];
+    j.scale = cc3v(0.1, 0.1, 0.1);
+    j.location = cc3v(-6, -4, 0.0);
+    [self addChild: j];
+
+
     //[self addContentFromPODFile: @"hello-world.pod"];
 	
 	// Or, if you don't need to modify the resource node at all before adding its content,
